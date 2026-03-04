@@ -1,6 +1,6 @@
 .PHONY: all help clean push test build
 
-RUBY_IMAGE := ruby:3.4.8-slim-trixie
+RUBY_IMAGE := ruby:3.4.8-trixie
 export VERSION = 1.1.0
 export AWS_DEFAULT_REGION = us-east-1
 

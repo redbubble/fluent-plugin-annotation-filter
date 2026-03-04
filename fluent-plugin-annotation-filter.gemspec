@@ -17,11 +17,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = '>= 4.0.7'
+  gem.required_ruby_version = '>= 3.1'
 
   gem.add_runtime_dependency "fluentd", '~> 1.19.2', '>= 1.19.2'
 
-  gem.add_development_dependency "bundler", "~> 3.4"
+  gem.add_development_dependency "bundler", "~> 2.6"
   gem.add_development_dependency "rspec", "~> 3.13"
   gem.add_development_dependency "test-unit", "~> 3.7" # TestUnit is, used by fluentd's test driver and must be included
 end
