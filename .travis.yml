@@ -1,8 +1,0 @@
-services:
-  - docker
-install: skip
-jobs:
-  include:
-    - name: test
-      script:
-        - make test
