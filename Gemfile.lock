@@ -116,7 +116,6 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  bundler (~> 2.3)
   fluent-plugin-annotation-filter!
   rspec (~> 3.11)
   test-unit (~> 3.5)
