@@ -3,6 +3,8 @@
 export VERSION = 1.0.6
 export AWS_DEFAULT_REGION = us-east-1
 
+RUBY_VERSION := 4.0.5
+
 define AWS_CLI_CMD
     docker container run --rm -i \
       -e AWS_ACCESS_KEY_ID       \
@@ -19,7 +21,7 @@ build: ## Create the docker image.
 		--workdir=/app \
 		-v `pwd`:/app \
 		-e VERSION \
-		ruby:3.1 \
+		ruby:$(RUBY_VERSION) \
 		gem build fluent-plugin-annotation-filter.gemspec
 
 test: ## Run the app tests.
@@ -30,7 +32,7 @@ test: ## Run the app tests.
 		-v `pwd`:/app \
 		-e VERSION \
 		-e BUNDLE_PATH=/app/gems \
-		ruby:3.1 \
+		ruby:$(RUBY_VERSION) \
 		script/docker-rspec.sh
 
 push: build ## Publish the gem
@@ -43,7 +45,7 @@ push: build ## Publish the gem
 		-e BUNDLE_PATH=/app/gems \
 		-e GEM_HOST_API_KEY=$$(${AWS_CLI_CMD} secretsmanager get-secret-value --secret-id rubygems_api_key --output json | jq -r '.SecretString | fromjson | .rubygems_api_key') \
 		-it \
-		ruby:3.1 \
+		ruby:$(RUBY_VERSION) \
 		script/push-gem.sh
 
 
