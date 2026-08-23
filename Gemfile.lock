@@ -121,4 +121,4 @@ DEPENDENCIES
   test-unit (~> 3.5)
 
 BUNDLED WITH
-   2.3.24
+  4.0.10

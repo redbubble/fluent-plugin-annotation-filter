@@ -43,6 +43,7 @@ lock: ## Re-resolve all dependencies and recreate Gemfile.lock.
 		-v `pwd`:/app \
 		-e VERSION \
 		-e BUNDLE_PATH=/app/gems \
+		-e BUNDLE_VERSION=system \
 		ruby:$(RUBY_VERSION) \
 		bundle lock --update
 
