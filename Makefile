@@ -1,4 +1,4 @@
-.PHONY: all help clean push test build
+.PHONY: all help clean push test build lock
 
 export VERSION = 1.0.6
 export AWS_DEFAULT_REGION = us-east-1
@@ -34,6 +34,17 @@ test: ## Run the app tests.
 		-e BUNDLE_PATH=/app/gems \
 		ruby:$(RUBY_VERSION) \
 		script/docker-rspec.sh
+
+lock: ## Re-resolve all dependencies and recreate Gemfile.lock.
+	@echo "--- :lock: Locking dependencies :lock:"
+	docker run \
+		--rm \
+		--workdir=/app \
+		-v `pwd`:/app \
+		-e VERSION \
+		-e BUNDLE_PATH=/app/gems \
+		ruby:$(RUBY_VERSION) \
+		bundle lock --update
 
 push: build ## Publish the gem
 	@echo "--- :fire: Pushing! :fire:"
