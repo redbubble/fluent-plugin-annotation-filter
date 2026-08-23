@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.required_ruby_version = '>= 3.1.2'
+  gem.required_ruby_version = '>= 3.2'
 
   gem.add_runtime_dependency "fluentd", '~> 1.19.3', '>= 1.19.3'
 
