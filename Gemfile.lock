@@ -117,8 +117,8 @@ PLATFORMS
 
 DEPENDENCIES
   fluent-plugin-annotation-filter!
-  rspec (~> 3.11)
-  test-unit (~> 3.5)
+  rspec (~> 3.13)
+  test-unit (~> 3.7)
 
 BUNDLED WITH
   4.0.10

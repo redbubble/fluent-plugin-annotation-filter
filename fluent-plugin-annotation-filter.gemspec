@@ -21,6 +21,6 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "fluentd", '~> 1.19.3', '>= 1.19.3'
 
-  gem.add_development_dependency "rspec", "~> 3.11"     # Like all our other Ruby projects, our tests are in RSpec
-  gem.add_development_dependency "test-unit", "~> 3.5" # TestUnit is, however, used by fluentd's test driver and must be included
+  gem.add_development_dependency "rspec", "~> 3.13"     # Like all our other Ruby projects, our tests are in RSpec
+  gem.add_development_dependency "test-unit", "~> 3.7" # TestUnit is, however, used by fluentd's test driver and must be included
 end
