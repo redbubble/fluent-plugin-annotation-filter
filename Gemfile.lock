@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    fluent-plugin-annotation-filter (1.0.6)
+    fluent-plugin-annotation-filter (1.0.7)
       fluentd (~> 1.19.3, >= 1.19.3)
 
 GEM

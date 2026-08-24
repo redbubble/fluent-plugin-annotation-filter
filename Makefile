@@ -1,6 +1,6 @@
 .PHONY: all help clean push test build lock
 
-export VERSION = 1.0.6
+export VERSION = 1.0.7
 export AWS_DEFAULT_REGION = us-east-1
 
 RUBY_VERSION := 4.0.5
