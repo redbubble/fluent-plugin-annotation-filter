@@ -5,15 +5,6 @@ export AWS_DEFAULT_REGION = us-east-1
 
 RUBY_VERSION := 4.0.5
 
-define AWS_CLI_CMD
-    docker container run --rm -i \
-      -e AWS_ACCESS_KEY_ID       \
-      -e AWS_DEFAULT_REGION      \
-      -e AWS_SECRET_ACCESS_KEY   \
-      -e AWS_SESSION_TOKEN       \
-      amazon/aws-cli:latest
-endef
-
 build: ## Create the docker image.
 	@echo "--- :wind_chime: Building :wind_chime:"
 	docker run \
