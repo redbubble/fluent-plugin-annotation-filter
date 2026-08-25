@@ -35,6 +35,8 @@ lock: ## Re-resolve all dependencies and recreate Gemfile.lock.
 		bundle lock --update
 
 push: build ## Publish the gem
+	$(if $(RUBY_GEMS_API_KEY),,$(error RUBY_GEMS_API_KEY is not set))
+	$(if $(RUBY_GEMS_OTP),,$(error RUBY_GEMS_OTP is not set))
 	@echo "--- :fire: Pushing! :fire:"
 	$(DOCKER_RUN) \
 		-e BUNDLE_PATH=/app/gems \
