@@ -15,7 +15,7 @@ module Fluent
       config_param :pass_through_events_without_kubernetes_tags, :bool, default: false
 
       config_section :contains_container_name, param_name: :contains_sections, multi: true do
-        desc "The name of the Kuberntes annotation that must contain the value in the value field"
+        desc "The name of the Kubernetes annotation that must contain the value in the value field"
         config_param :annotation, :string
       end
 
