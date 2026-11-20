@@ -3,7 +3,7 @@
 export VERSION = 1.0.7
 export AWS_DEFAULT_REGION = us-east-1
 
-RUBY_VERSION := 4.0.5
+RUBY_VERSION := 4.0.10
 
 DOCKER_RUN := docker run \
 	--rm \
